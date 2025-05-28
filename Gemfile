@@ -51,7 +51,8 @@ gem "hotwire-livereload"
 gem "foreman"
 
 # Tools
-gem 'faker'
+gem "cloudinary"
+gem "faker"
 
 group :development, :test do
   gem "dotenv-rails"

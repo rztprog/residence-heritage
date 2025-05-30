@@ -18,7 +18,17 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <%# Navbar %>
     <%= render 'shared/navbar' %>
+    <%# Banner %>
+    <% if current_page?(root_path) %>
+      <div class="h-[calc(100vh-5rem)]">
+        <%= cl_image_tag('development/residenceheritage/banner.png',
+          class: "w-full h-full object-cover") 
+        %>
+      </div>
+    <% end %>
+    <%# Content %>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>

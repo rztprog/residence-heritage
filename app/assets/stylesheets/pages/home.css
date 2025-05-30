@@ -1,4 +1,33 @@
+@layer components{
+  .container {
+    @apply max-w-2xl;
+  }
+}
+
 body {
   background-color: var(--grey);
   font-family: var(--body-font);
+}
+
+.section-title h1,
+.section-title h2 {
+  font-style: italic;
+}
+
+.section-title h1 {
+  font-size: 36px;
+}
+
+.section-title h2 {
+  font-family: var(--inter-font);
+  font-size: 16px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 175px;
+  height: 1px;
+  background-color: black;
+  margin-top: 0.5rem;
 }

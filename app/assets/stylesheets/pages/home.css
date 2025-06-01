@@ -1,16 +1,9 @@
-@layer components{
-  .container {
-    @apply max-w-2xl;
-  }
-}
-
 body {
   background-color: var(--grey);
   font-family: var(--body-font);
 }
 
-.section-title h1,
-.section-title h2 {
+.section-title {
   font-style: italic;
 }
 
@@ -18,7 +11,7 @@ body {
   font-size: 36px;
 }
 
-.section-title h2 {
+.section-title p {
   font-family: var(--inter-font);
   font-size: 16px;
 }

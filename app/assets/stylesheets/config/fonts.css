@@ -4,7 +4,7 @@
 /* Define font variables in :root */
 :root {
   --body-font: "Lora", "Helvetica", "sans-serif";
-  --inter-font: "Inter"
+  --inter-font: "Inter", "Helvetica", "sans-serif";
 }
 
 /*

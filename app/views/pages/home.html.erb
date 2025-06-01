@@ -1,33 +1,51 @@
-<section class="h-[calc(100vh)] py-28">
-  <div class="container mx-auto">
-    <div class="section-title">
+<section class="h-[calc(100vh)] px-[120px] py-[5vh] max-w-[2560px] mx-auto">
+  <div class="section-content mx-auto">
+    <header class="section-title">
       <h1>Plus qu'un logement, une expérience</h1>
-      <h2>Un cadre de vie pensé pour le confort et l'élégance</h2>
-    </div>
-    <div class="cards bg-blue-500">
-      <div class="card">
-        <%= cl_image_tag('development/residenceheritage/card1',
-          class: "") 
-        %>
-      </div>
-      <div class="card">
-        <%= cl_image_tag('development/residenceheritage/card2',
-          class: "") 
-        %>
-      </div>
-      <div class="card">
-        <%= cl_image_tag('development/residenceheritage/card3',
-          class: "") 
-        %>
-      </div>
+      <p>Un cadre de vie pensé pour le confort et l'élégance</p>
+    </header>
+    <div class="cards">
+      <figure class="card-wrapper">
+        <div class="card">
+          <%= cl_image_tag('development/residenceheritage/card1',
+            class: "") 
+          %>
+        </div>
+        <figcaption>
+          <span>🏠 Design raffiné</span>
+          <span>Des appartements soigneusement aménagés</span>
+        </figcaption>
+      </figure>
+      <figure class="card-wrapper">
+        <div class="card">
+          <%= cl_image_tag('development/residenceheritage/card2',
+            class: "") 
+          %>
+        </div>
+        <figcaption>
+          <span>🌍 Localisation idéale</span>
+          <span>Au cœur des quartiers les plus prisés</span>
+        </figcaption>
+      </figure>
+      <figure class="card-wrapper">
+        <div class="card">
+          <%= cl_image_tag('development/residenceheritage/card3',
+            class: "") 
+          %>
+        </div>
+        <figcaption>
+          <span>🔑 Confort et services</span>
+          <span class="font-(family-name:--inter-font)">Tout équipé pour une colocation haut de gamme</span>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
-<section class="h-[calc(100vh)] py-28 bg-(--beige)">
-  <div class="container mx-auto">
-    <div class="section-title">
+<section class="h-[calc(100vh)] px-[120px] py-28 bg-(--beige)">
+  <div class="section-content mx-auto">
+    <header class="section-title">
       <h1>Nos appartements</h1>
-      <h2>Des espaces pensés pour vivre pleinement</h2>
-    </div>
+      <p>Des espaces pensés pour vivre pleinement</p>
+    </header>
   </div>
 </section>

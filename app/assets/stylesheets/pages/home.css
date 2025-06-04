@@ -24,3 +24,19 @@ body {
   background-color: black;
   margin-top: 0.5rem;
 }
+
+.separation-vertical::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 120%;
+  background-color: rgba(0, 0, 0, 0.20);
+  margin: 0 40px;
+}
+
+.services-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

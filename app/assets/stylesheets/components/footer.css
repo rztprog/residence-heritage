@@ -1,0 +1,22 @@
+footer > li {
+    font-weight: bold;
+}
+
+.footer-nav {
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, 0.10);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.footer-nav div {
+    margin-right: 40px;
+}
+
+footer h2 {
+    font-size: 22px;
+    color: var(--blue);
+}
+
+.footer-social {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10); 
+}

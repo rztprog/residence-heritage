@@ -1,6 +1,5 @@
-<% unless current_page?(root_path) %>
-<section class="h-[calc(100vh)] px-[120px] py-[5vh] max-w-[2560px] mx-auto">
-  <div class="section-content mx-auto">
+<section class="h-screen flex items-center">
+  <div class="w-full max-w-[1728px] px-6 sm:px-12 lg:px-[120px] xl:px-[140px] mx-auto">
     <header class="section-title">
       <h1>Plus qu'un logement, une expérience</h1>
       <p>Un cadre de vie pensé pour le confort et l'élégance</p>
@@ -42,8 +41,8 @@
     </div>
   </div>
 </section>
-<section class="h-[calc(100vh)] px-[120px] py-28 bg-(--beige)">
-  <div class="section-content mx-auto">
+<section class="h-screen flex items-center bg-(--beige)">
+  <div class="w-full max-w-[1728px] px-6 sm:px-12 lg:px-[120px] xl:px-[140px] mx-auto">
     <header class="section-title">
       <h1>Nos appartements</h1>
       <p>Des espaces pensés pour vivre pleinement</p>
@@ -51,17 +50,15 @@
     <%= render 'shared/apparts' %>
   </div>
 </section>
-<section class="h-[calc(100vh)] px-[120px] py-28">
-  <div class="section-content mx-auto">
+<section class="h-screen flex items-center">
+  <div class="w-full max-w-[1728px] px-6 sm:px-12 lg:px-[120px] xl:px-[140px] mx-auto">
     <header class="section-title">
       <h1>L'histoire rencontre le confort moderne</h1>
       <p>Inspiration et services haut de gamme dans un lieu pensé pour grandir</p>
     </header>
-    <%= render 'shared/apparts' %>
-  </div>
-  <div class="mt-10 history-wrapper flex h-[400px]">
-    <div class="services w-[50%]">
-      <h2 class='mb-10 text-2xl'>🛎️ Liste de services premium</h2>
+    <div class="mt-10 flex">
+      <div class="w-[50%]">
+        <h2 class='mb-10 text-2xl'>🛎️ Liste de services premium</h2>
         <ul class='services-list text-xl'>
           <li>Internet haut débit (Wifi 6E)</li>
           <li>Abonnements Netflix / Prime (salon & chambres)</li>
@@ -70,17 +67,25 @@
           <li>Ménage hebdomadaire</li>
           <li>Accés sécurisé et alarme connecté</li>
         </ul>
-    </div>
-    <div class="separation-vertical"></div>
-    <div class="history w-[50%]">
-      <h2 class='mb-10 text-2xl'>🏛️ Un projet de cœur, pensé en famille</h2>
-      <p class='text-xl'>
-        Nous sommes deux frères animés par une curiosité constante, l'envie de créer, de lire, de grandir.</br>
-        À travers Résidence Héritage, notre ambition est simple, donner vie à un lieu, idéalement situé, qui reflète ces aspirations.</br>
-        Des colocations haut de gamme inspirées des grandes figures culturelles, où chaque détail est pensé pour allier esthétisme, confort et atmosphère stimulante.</br>
-        Nous sélectionnons avec soin chaque mobilier, chaque teinte, chaque service — pour que vous vous sentiez immédiatement chez vous.</br>
-      </p>
+      </div>
+      <div class="separation-vertical"></div>
+      <div class="w-[50%]">
+        <h2 class='mb-10 text-2xl'>🏛️ Un projet de cœur, pensé en famille</h2>
+        <div class="services-list text-xl">
+          <p>
+            Nous sommes deux frères animés par une curiosité constante, l'envie de créer, de lire, de grandir.
+          </p>
+          <p>
+            À travers Résidence Héritage, notre ambition est simple, donner vie à un lieu, idéalement situé, qui reflète ces aspirations.
+          </p>
+          <p >
+            Des colocations haut de gamme inspirées des grandes figures culturelles, où chaque détail est pensé pour allier esthétisme, confort et atmosphère stimulante.
+          </p>
+          <p>
+            Nous sélectionnons avec soin chaque mobilier, chaque teinte, chaque service — pour que vous vous sentiez immédiatement chez vous.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<% end %>

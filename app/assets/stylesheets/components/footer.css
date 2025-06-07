@@ -4,8 +4,8 @@ footer > li {
 
 .footer-nav {
     display: flex;
-    border-top: 1px solid rgba(0, 0, 0, 0.10);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .footer-nav div {
@@ -18,5 +18,5 @@ footer h2 {
 }
 
 .footer-social {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.10); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16); 
 }

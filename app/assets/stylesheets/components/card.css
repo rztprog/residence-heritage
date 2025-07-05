@@ -35,3 +35,15 @@ figcaption span:last-child {
     font-size: 16px;
     font-weight: 200;
 }
+
+.card-flat {
+
+}
+
+.card-flat-body {
+    background-color: #fff;
+}
+
+.card-flat figure {
+    background-color: black;
+}

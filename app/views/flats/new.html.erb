@@ -29,13 +29,28 @@
       </div>
 
       <div class="field">
+        <%= f.label :rooms, "Nombre de chambre" %><br>
+        <%= f.number_field :rooms %>
+      </div>
+
+      <div class="field">
+        <%= f.label :surface, "Surface en m²" %><br>
+        <%= f.number_field :surface %>
+      </div>
+
+      <div class="field">
+        <%= f.label :subway, "Transport à proximité" %><br>
+        <%= f.text_field :subway %>
+      </div>
+
+      <div class="field">
         <%= f.label :description, "Description" %><br>
         <%= f.text_area :description %>
       </div>
 
       <div class="field">
         <%= f.label :main_photo, "Photo principale (URL Cloudinary)" %><br>
-        <%= f.text_field :main_photo %>
+        <%= f.file_field :main_photo %>
       </div>
 
       <div class="field">

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_05_165049) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_06_144016) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -54,6 +54,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_05_165049) do
     t.datetime "updated_at", null: false
     t.integer "rooms"
     t.string "subway"
+    t.integer "surface"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

@@ -1,9 +1,50 @@
-<div class='flex flex-column'>
-  <%= @flat.name %>
-  <%= @flat.address %>
-  <%= @flat.title %>
-  <%= @flat.description %>
-  <%= @flat.main_photo %>
-  <%= @flat.rent %>
-  <%= @flat.charges %>
+<figure class='show-figure'>
+  <img src="https://plus.unsplash.com/premium_photo-1674676471417-07f613528a94?q=80&w=1445&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+</figure>
+<div class="mt-5 max-w-[1728px] w-full px-6 sm:px-12 lg:px-[120px] xl:px-[140px] mx-auto">
+    <h1 class='show-name'><%= @flat.name %></h1>
+    <p class='show-title'><%= @flat.title %></p>
+    <div class='card-description-wrapper'>
+      <p><%= @flat.description %></p>
+      <div class='price-card'>
+        <p class='text-2xl'><b>€ <%= @flat.rent + @flat.charges %></b> / mois</p>
+        <p class='text-sm'>Toutes charges comprises</p>
+        <hr>
+        <div class='price-card-line'>
+          <p>Loyer / mois</p>
+          <p><%= @flat.rent %>€</p>
+        </div>
+        <div class='price-card-line'>
+          <p>Charges</p>
+          <p><%= @flat.charges %>€</p>
+        </div>
+        <div class='mt-5 price-card-line font-bold'>
+          <p>Total / mois</p>
+          <p><%= @flat.rent + @flat.charges %>€</p>
+        </div>
+        <hr>
+        <div class='price-card-line font-bold'>
+          <p>Dépôt de garantie</p>
+          <p><%= @flat.rent + @flat.charges %>€</p>
+        </div>
+        <hr>
+        <div class='price-card-line font-bold'>
+          <p>Éligible aux aides (APL, ALS)</p>
+          <p>Oui</p>
+        </div>
+        <div class='price-card-line font-bold'>
+          <p>Chambre disponible</p>
+          <p><%= @flat.rent + @flat.charges %>€</p>
+        </div>
+        <%= link_to root_path, class: "mt-5 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl shadow transition duration-150 w-full text-center" do %>
+          <i class="fas fa-undo-alt"> Je veux rejoindre cette collocation</i>
+        <% end %>
+      </div>
+    </div>
+    <h2 class='show-name'>Plongez dans les lieux</h2>
+    <p>Ici les photos blabla..</p>
+    <h2 class='show-name'>Équipements</h2>
+    <p>Ici les equipements</p>
+    <h2 class='show-name'>Où se trouve l'appartement ?</h2>
+    <p>Map</p>
 </div>

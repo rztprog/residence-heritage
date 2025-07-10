@@ -79,5 +79,31 @@
       </div>
     </div>
     <h2 class='show-name'>Où se trouve l'appartement ?</h2>
-    <p>Map</p>
+    <div class='mt-10 mb-10'>
+      <div id="map" style="height: 600px"></div>
+    </div>
+    
+    <script>
+      document.addEventListener('turbo:load', () => {
+        // Charger dans le layout mais reload via turbo:load
+        mapboxgl.accessToken = "<%= ENV['MAPBOX_KEY'] %>";
+
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: [3.161304, 50.700424], 
+            zoom: 14
+        });
+
+
+        const marker = new mapboxgl.Marker()
+          .setLngLat([3.161304, 50.700424])
+          .addTo(map);
+          
+
+        map.addControl(new mapboxgl.NavigationControl());
+        map.scrollZoom.disable();
+
+      });
+    </script>
 </div>

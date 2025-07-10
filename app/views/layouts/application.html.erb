@@ -16,6 +16,9 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <%= stylesheet_link_tag "https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css" %>
+    <%= javascript_include_tag "https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.js" %>
   </head>
   <body>
     <%# Navbar %>

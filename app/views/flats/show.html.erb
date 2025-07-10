@@ -2,6 +2,9 @@
   <img src="https://plus.unsplash.com/premium_photo-1674676471417-07f613528a94?q=80&w=1445&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
 </figure>
 <div class="font-(family-name:--inter-font) mt-5 max-w-[1728px] w-full px-6 sm:px-12 lg:px-[120px] xl:px-[140px] mx-auto">
+    <%= link_to edit_flat_path(@flat), class: "mt-5 inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg shadow transition duration-150" do %>
+      Modifier l'appartement
+    <% end %>
     <h1 class='show-name'><%= @flat.name %></h1>
     <p class='show-title'><%= @flat.title %></p>
     <div class='card-description-wrapper'>
@@ -82,30 +85,13 @@
     <%= @flat.latitude %>
     <%= @flat.longitude %>
     <div class='mt-10 mb-10'>
-      <div id="map" style="height: 600px"></div>
+      <div 
+        id="map"
+        data-controller="map"
+        data-map-latitude="<%= @flat.latitude %>"
+        data-map-longitude="<%= @flat.longitude %>"
+        data-map-name="<%= @flat.name %>"
+        style="height: 600px">
+      </div>
     </div>
-    
-    <script>
-      document.addEventListener('turbo:load', () => {
-        // Charger dans le layout mais reload via turbo:load
-        mapboxgl.accessToken = "<%= ENV['MAPBOX_KEY'] %>";
-
-        const map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v12',
-            center: [3.161304, 50.700424], 
-            zoom: 14
-        });
-
-
-        const marker = new mapboxgl.Marker()
-          .setLngLat([3.161304, 50.700424])
-          .addTo(map);
-          
-
-        map.addControl(new mapboxgl.NavigationControl());
-        map.scrollZoom.disable();
-
-      });
-    </script>
 </div>

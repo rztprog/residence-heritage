@@ -54,6 +54,7 @@ gem "foreman"
 # Tools
 gem "cloudinary"
 gem "faker"
+gem "geocoder"
 
 group :development, :test do
   gem "dotenv-rails"

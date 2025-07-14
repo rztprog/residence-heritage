@@ -84,14 +84,13 @@
     <h2 class='show-name'>Où se trouve l'appartement ?</h2>
     <%= @flat.latitude %>
     <%= @flat.longitude %>
-    <div class='mt-10 mb-10'>
-      <div 
-        id="map"
-        data-controller="map"
-        data-map-latitude="<%= @flat.latitude %>"
-        data-map-longitude="<%= @flat.longitude %>"
-        data-map-name="<%= @flat.name %>"
-        style="height: 600px">
-      </div>
+    <div 
+      id="map"
+      data-controller="map"
+      data-map-latitude="<%= @flat.latitude %>"
+      data-map-longitude="<%= @flat.longitude %>"
+      data-map-name="<%= @flat.name %>"
+      data-map-address="<%= @flat.address %>"
+      class="mt-10 mb-10">
     </div>
 </div>

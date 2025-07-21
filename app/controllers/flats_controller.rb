@@ -4,7 +4,7 @@ class FlatsController < ApplicationController
   def index
     if params[:search]
       @flats_all = Flat.all
-      @flats = Flat.where("name LIKE '%#{params[:search]}%'")
+      @flats = Flat.where("name ILIKE ?", "%#{params[:search]}%")
     else
       @flats = Flat.all
     end

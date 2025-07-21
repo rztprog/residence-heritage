@@ -10,7 +10,9 @@
 }
 
 .price-card {
-    margin-top: -150px;
+    position: absolute;
+    right: 0;
+    top: -100px;
     width: 400px;
     height: 400px;
     background-color: #fff;
@@ -44,4 +46,12 @@ hr {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.20);
   margin: 0 40px;
+}
+
+.show-photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }

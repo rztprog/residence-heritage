@@ -4,6 +4,6 @@ class PagesController < ApplicationController
   end
 
   def contact
-        @contact_message = ContactMessage.new
+    @contact_message = ContactMessage.new
   end
 end

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   root to: "pages#home"
-  resources :flats, only: [:index, :new, :create, :show, :edit, :update, :destroy], path: 'appartements'
-  get 'contact', to: 'pages#contact'
+  resources :flats, only: [ :index, :new, :create, :show, :edit, :update, :destroy ], path: "appartements"
+  get "contact", to: "pages#contact"
+  post "contact_messages", to: "contact_messages#create"
 end

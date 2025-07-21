@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mapbox-token" content="<%= ENV['MAPBOX_KEY'] %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= yield :head %>
@@ -16,12 +17,14 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body>
     <%# Navbar %>
     <%= render 'shared/navbar' %>
-    <%# Banner %>
-    <% unless current_page?(root_path) %>
+    <%# Root Banner %>
+    <% if current_page?(root_path) %>
       <div class="h-[calc(100vh-5rem)]">
         <%= cl_image_tag('development/residenceheritage/banner.png',
           class: "w-full h-full object-cover") 

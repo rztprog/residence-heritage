@@ -1,0 +1,12 @@
+<div class="mt-5 max-w-[1728px] w-full px-6 sm:px-12 lg:px-[120px] xl:px-[140px] mx-auto">
+  <header class="section-title">
+    <h1>Nos appartements</h1>
+    <p>Des espaces pensés pour vivre pleinement</p>
+  </header>
+  <div>
+    <%= link_to new_flat_path, class: "mt-5 inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg shadow transition duration-150" do %>
+      Ajouter un appartement
+    <% end %>
+  </div>
+  <%= render 'shared/apparts' %>
+</div>

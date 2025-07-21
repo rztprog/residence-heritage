@@ -32,7 +32,7 @@
       <p>Chambre disponible</p>
       <p>Oui</p>
     </div>
-    <%= link_to root_path, class: "mt-5 inline-block bg-(--blue) text-white font-semibold py-2 px-4 rounded-xl shadow transition duration-150 w-full text-center" do %>
+    <%= link_to root_path, class: "join-button mt-5 inline-block bg-(--blue) text-white font-semibold py-4 px-4 rounded-xl shadow transition duration-150 w-full text-center" do %>
       Je veux rejoindre cette collocation   
     <% end %>
   </div>
@@ -40,9 +40,9 @@
     <%= link_to edit_flat_path(@flat), class: "mt-5 inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg shadow transition duration-150" do %>
       Modifier l'appartement
     <% end %>
-    <h1 class='show-name mt-8'><%= @flat.name %></h1>
-    <p class='show-title mb-10'><%= @flat.title %></p>
-    <div class='card-description-wrapper'>
+    <h1 class='show-name mt-10'><%= @flat.name %></h1>
+    <p class='show-title mb-5'><%= @flat.title %></p>
+    <div class='card-description-wrapper mb-10'>
       <p class='w-[60%]'><%= @flat.description %></p>
     </div>
     <h2 class='show-name'>Plongez dans les lieux</h2>
@@ -50,7 +50,7 @@
     <div class="show-photos-grid"></div>
     <h2 class='show-name'>Équipements</h2>
     <div class="">
-      <div class="mt-10 mb-10 flex">
+      <div class="mb-10 flex">
         <div class="w-[50%]">
           <h2 class='text-xl'>🛏️ Équipements individuels</h2>
           <p class='mb-10'>Dans chaque chambre</p>
@@ -87,8 +87,8 @@
     <p>
       <%= @flat.address %>
     </p>
-    <p>
-      <%= @flat.latitude %>
+    <p>Coordonnées:
+      <%= @flat.latitude %>,
       <%= @flat.longitude %>
     </p>
     <div 

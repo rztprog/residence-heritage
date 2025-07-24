@@ -2,17 +2,17 @@
   <%= form_for @flat do |f| %>
     <div class="field">
       <%= f.label :name, "Nom de l'appartement" %><br>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, placeholder: "L'Atelier des maîtres" %>
     </div>
 
     <div class="field">
       <%= f.label :address, "Adresse" %><br>
-      <%= f.text_field :address %>
+      <%= f.text_field :address, placeholder: "2 Boulevard de la république, 59100 Roubaix" %>
     </div>
 
     <div class="field">
       <%= f.label :title, "Titre de l'annonce" %><br>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, placeholder: "2 chambres | 1 pièce de vie | DPE C" %>
     </div>
 
     <div class="field">

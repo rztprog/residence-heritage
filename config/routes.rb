@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: "pages#home"
+  get "contact_messages/new"
+  get "contact_messages/create"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -12,5 +13,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :flats, only: [:index, :new, :create, :show, :edit, :update, :destroy], path: 'appartements'
+
+  root to: "pages#home"
+  resources :flats, only: [ :index, :new, :create, :show, :edit, :update, :destroy ], path: "appartements"
+  get "contact", to: "pages#contact"
+  post "contact_messages", to: "contact_messages#create"
+  get "mentions-legales", to: "pages#mentions_legales", as: "mentions_legales"
 end

@@ -20,21 +20,27 @@
 
     <link href='https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css' rel='stylesheet' />
   </head>
-  <body>
-    <%# Navbar %>
-    <%= render 'shared/navbar' %>
-    <%# Root Banner %>
-    <% if current_page?(root_path) %>
-      <div class="h-[calc(100vh-5rem)]">
-        <%= cl_image_tag('development/residenceheritage/banner.png',
-          class: "w-full h-full object-cover") 
-        %>
-      </div>
-    <% end %>
-    <%# Content %>
-    <main class="mx-auto w-full flex flex-col">
-      <%= yield %>
-    </main>
+  <body class="min-h-screen flex flex-col">
+    <div class="flex-1 flex flex-col">
+      <%# Navbar %>
+      <%= render 'shared/navbar' %>
+
+      <%# Root Banner %>
+      <% if current_page?(root_path) %>
+        <div class="h-[calc(100vh-5rem)]">
+          <%= cl_image_tag('development/residenceheritage/banner.png',
+            class: "w-full h-full object-cover") 
+          %>
+        </div>
+      <% end %>
+
+      <%# Content %>
+      <main class="mx-auto w-full flex flex-col flex-1">
+        <%= yield %>
+      </main>
+    </div>
+
+    <%# Footer %>
     <%= render 'shared/footer' %>
   </body>
 </html>

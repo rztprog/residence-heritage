@@ -1,0 +1,42 @@
+<div class="mt-10 mb-10 max-w-[980px] w-full px-6 sm:px-12 lg:px-[120px] xl:px-[140px] mx-auto text-center">
+  <h1>Parlons de ton futur chez-toi</h1>
+  <p>
+    Une question, une demande de visite, ou envie de rejoindre l'une de nos colocations ?</br></br>
+    Si tu es arrivé jusqu'ici, c'est sûrement que notre concept t'a interpellé.</br>
+    Qu'il s'agisse d'un mot sympa ou d'une vraie envie d'emménager, ce formulaire est là pour toi.</br>
+    On lit chaque message avec attention, et on te répond toujours avec plaisir.</br></br>
+  </p>
+  <p>
+    Le formulaire est juste là 👇
+  </p>
+  <%= form_with model: @contact_message, url: contact_messages_path, local: true do |f| %>
+    <% if @contact_message.errors.any? %>
+      <div class="error-messages">
+        <h2><%= pluralize(@contact_message.errors.count, "erreur") %> :</h2>
+        <ul>
+          <% @contact_message.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="flex flex-wrap gap-4 mt-5">
+      <div class="field w-full md:w-[calc(50%-0.5rem)]">
+        <%= f.text_field :name, class: "w-full border p-3", placeholder: "Ton prénom" %>
+      </div>
+
+      <div class="field w-full md:w-[calc(50%-0.5rem)]">
+        <%= f.email_field :email, class: "w-full border p-3", placeholder: "Ton nom" %>
+      </div>
+    </div>
+
+    <div class="field mt-5">
+      <%= f.text_area :message, placeholder: "Ton message" %>
+    </div>
+
+    <div class="mt-5 actions w-full bg-(--blue) hover:bg-(--light-blue) text-white p-5 cursor-pointer">
+      <%= f.submit "Envoyer le message" %>
+    </div>
+  <% end %>
+</div>

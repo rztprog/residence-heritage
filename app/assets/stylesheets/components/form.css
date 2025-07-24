@@ -3,17 +3,16 @@
 }
 
 .field input,
-.field textarea {
-    /* background-color: var(--beige); */
-    border: 1px solid var(--beige);
-    border-radius: 5px;
+.field textarea{
+    background-color: white;
+    border: 1px solid black;
     width: 100%;
-    padding: 20px;
-    font-size: 1.2rem;
+    padding: 12px;
+    /* font-size: 1.2rem; */
 }
 
 .field textarea {
-    min-height: 150px;
+    min-height: 200px;
 }
 
 .field input[type=number] {

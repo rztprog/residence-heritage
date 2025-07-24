@@ -1,8 +1,9 @@
 <div class="mt-10 mb-10 max-w-[980px] w-full px-6 sm:px-12 lg:px-[120px] xl:px-[140px] mx-auto text-center">
   <h1>Parlons de ton futur chez-toi</h1>
   <p>
-    Une question, une idée ou juste un mot à nous glisser ? </br>
-    Si tu es arrivé jusqu'ici, c'est sûrement que quelque chose t'a interpellé.</br>
+    Une question, une demande de visite, ou envie de rejoindre l'une de nos colocations ?</br></br>
+    Si tu es arrivé jusqu'ici, c'est sûrement que notre concept t'a interpellé.</br>
+    Qu'il s'agisse d'un mot sympa ou d'une vraie envie d'emménager, ce formulaire est là pour toi.</br>
     On lit chaque message avec attention, et on te répond toujours avec plaisir.</br></br>
   </p>
   <p>
@@ -34,7 +35,7 @@
       <%= f.text_area :message, placeholder: "Ton message" %>
     </div>
 
-    <div class="actions w-full bg-blue-500 p-5">
+    <div class="actions w-full bg-(--blue) hover:bg-(--light-blue) text-white p-5 cursor-pointer">
       <%= f.submit "Envoyer le message" %>
     </div>
   <% end %>

@@ -32,7 +32,7 @@
       <p>Chambre disponible</p>
       <p>Oui</p>
     </div>
-    <%= link_to root_path, class: "join-button mt-5 inline-block bg-(--blue) text-white font-semibold py-4 px-4 rounded-xl shadow transition duration-150 w-full text-center" do %>
+    <%= link_to contact_path, class: "join-button mt-5 inline-block bg-(--blue) text-white font-semibold py-4 px-4 rounded-xl shadow transition duration-150 w-full text-center" do %>
       Je veux rejoindre cette collocation   
     <% end %>
   </div>
@@ -94,6 +94,6 @@
       data-map-longitude="<%= @flat.longitude %>"
       data-map-name="<%= @flat.name %>"
       data-map-address="<%= @flat.address %>"
-      class="mt-10 mb-10">
+      class="mb-10">
     </div>
 </div>

@@ -22,11 +22,11 @@
     <% end %>
 
     <div class="flex flex-wrap gap-4 mt-5">
-      <div class="w-full md:w-[calc(50%-0.5rem)]">
+      <div class="field w-full md:w-[calc(50%-0.5rem)]">
         <%= f.text_field :name, class: "w-full border p-3", placeholder: "Ton prénom" %>
       </div>
 
-      <div class="w-full md:w-[calc(50%-0.5rem)]">
+      <div class="field w-full md:w-[calc(50%-0.5rem)]">
         <%= f.email_field :email, class: "w-full border p-3", placeholder: "Ton nom" %>
       </div>
     </div>
@@ -35,7 +35,7 @@
       <%= f.text_area :message, placeholder: "Ton message" %>
     </div>
 
-    <div class="actions w-full bg-(--blue) hover:bg-(--light-blue) text-white p-5 cursor-pointer">
+    <div class="mt-5 actions w-full bg-(--blue) hover:bg-(--light-blue) text-white p-5 cursor-pointer">
       <%= f.submit "Envoyer le message" %>
     </div>
   <% end %>

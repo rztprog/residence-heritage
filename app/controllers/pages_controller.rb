@@ -6,4 +6,7 @@ class PagesController < ApplicationController
   def contact
     @contact_message = ContactMessage.new
   end
+
+  def mentions_legales
+  end
 end

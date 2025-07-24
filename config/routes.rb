@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   resources :flats, only: [ :index, :new, :create, :show, :edit, :update, :destroy ], path: "appartements"
   get "contact", to: "pages#contact"
   post "contact_messages", to: "contact_messages#create"
+  get "mentions-legales", to: "pages#mentions_legales", as: "mentions_legales"
 end

@@ -2,9 +2,10 @@
   <nav class='footer-nav py-10' aria-label="Pied de page">
     <div>
       <h2>NOS APPARTEMENTS</h2>
-      <ul>
-        <li><a href="#">L'Atelier des Maîtres</a></li>
-        <li><a href="#">Le Salon des Lumières</a></li>
+      <ul>          
+        <% @footer_flats.each do |flat| %>
+          <li><%= link_to flat.name, flat_path(flat.id) %></li>
+        <% end %>
       </ul>
     </div>
     <div>
@@ -20,8 +21,8 @@
     <div>
       <h2>PLAN DU SITE</h2>
       <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/">Accueil</a></li>
+        <li><%= link_to "Contact", contact_path %></li>
       </ul>
     </div>
   </nav>

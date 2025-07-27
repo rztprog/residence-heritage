@@ -1,0 +1,14 @@
+.breadcrumb {
+    font-family: var(--inter-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.breadcrumb a {
+    text-decoration: underline;
+}
+
+.breadcrumb a:hover {
+    color: grey;
+}

@@ -23,6 +23,17 @@ footer h2 {
     border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
+.footer-social i {
+    font-size: 16px;
+}
+
+.footer-social ul {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 footer a:hover {
     color: grey;
 }

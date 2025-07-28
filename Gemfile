@@ -44,7 +44,6 @@ gem "thruster", require: false
 gem "autoprefixer-rails"
 gem "tailwindcss-ruby"
 gem "tailwindcss-rails"
-gem "font-awesome-rails", "~> 4.7", ">= 4.7.0.9"
 # gem "cssbundling-rails"
 
 # Dev

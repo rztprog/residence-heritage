@@ -10,10 +10,13 @@
 }
 
 .price-card {
-    position: absolute;
+    /* position: absolute;
     right: 0;
     top: -100px;
+    */
+
     width: 400px;
+
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 
@@ -62,4 +65,14 @@ hr {
 
 .join-button:hover {
     background-color: var(--light-blue);
+}
+
+.content-show {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-right-show {
+    margin-left: 40px;
+    width: 400px;
 }

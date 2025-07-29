@@ -19,7 +19,7 @@ export default class extends Controller {
 
         this.map = new mapboxgl.Map({
             container: this.element,
-            style: 'mapbox://styles/mapbox/streets-v12',
+            style: 'mapbox://styles/mapbox/standard',
             center: center,
             zoom: 15
         })
@@ -39,6 +39,9 @@ export default class extends Controller {
 
         this.map.scrollZoom.disable();
         this.map.addControl(new mapboxgl.NavigationControl());
+        this.map.addControl(new mapboxgl.FullscreenControl());
+        this.map.addControl(new mapboxgl.GeolocateControl());
+        this.map.addControl(new mapboxgl.ScaleControl());
 
         // Force resize sometimes
         this.map.on("load", () => {

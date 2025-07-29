@@ -9,7 +9,7 @@ export default class extends Controller {
 
     this.listTargets.forEach(list => {
       if (list.dataset.index === clickedIndex) {
-        
+
         list.classList.toggle("footer-list")
         return
       }

@@ -51,6 +51,10 @@ footer a:hover {
         flex-direction: column;
     }
 
+    .footer-nav div {
+        margin-right: 0;
+    }
+
     .footer-list {
         display: none;
     }

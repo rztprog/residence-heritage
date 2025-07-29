@@ -1,16 +1,17 @@
+<% index = 1 %>
 <footer class='w-full mb-4 mx-auto font-(family-name:--inter-font)'>
-  <nav class='footer-nav p-6 sm:px-12 lg:px-[120px] xl:px-[140px] max-w-[1728px] mx-auto' aria-label="Pied de page">
+  <nav data-controller='footer-toggle' class='footer-nav p-6 sm:px-12 lg:px-[120px] xl:px-[140px] max-w-[1728px] mx-auto' aria-label="Pied de page">
     <div>
-      <h2>NOS APPARTEMENTS</h2>
-      <ul>          
+      <h2 class='footer-title' data-action="click->footer-toggle#toggle" data-index="<%= index %>"> NOS APPARTEMENTS</h2>
+      <ul data-footer-toggle-target="list" class="footer-list" data-index="<%= index %>">       
         <% @footer_flats.each do |flat| %>
           <li><%= link_to flat.name, flat_path(flat.id) %></li>
         <% end %>
       </ul>
     </div>
     <div>
-      <h2>À PROPOS</h2>
-      <ul>
+      <h2 class='footer-title' data-action="click->footer-toggle#toggle" data-index="<%= index + 1 %>">À PROPOS</h2>
+      <ul data-footer-toggle-target="list" class="footer-list" data-index="<%= index + 1 %>">
         <li><a href="#">Le concept</a></li>
         <li><a href="#">Qui sommes-nous</a></li>
         <li><%= link_to "Mentions légales", mentions_legales_path %></li>
@@ -19,8 +20,8 @@
       </ul>
     </div>
     <div>
-      <h2>PLAN DU SITE</h2>
-      <ul>
+      <h2 class='footer-title' data-action="click->footer-toggle#toggle" data-index="<%= index + 2 %>">PLAN DU SITE</h2>
+      <ul data-footer-toggle-target="list" class="footer-list" data-index="<%= index + 2 %>">
         <li><a href="/">Accueil</a></li>
         <li><%= link_to "Contact", contact_path %></li>
       </ul>

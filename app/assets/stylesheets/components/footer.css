@@ -37,3 +37,25 @@ footer h2 {
 footer a:hover {
     color: grey;
 }
+
+@media (max-width: 768px) {
+    .footer-nav h2 {
+        cursor: pointer;
+    }
+
+    .footer-nav > div {
+        margin-bottom: 12px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+    }
+
+    .footer-nav div {
+        margin-right: 0;
+    }
+
+    .footer-list {
+        display: none;
+    }
+}

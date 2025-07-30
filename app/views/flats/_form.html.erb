@@ -1,5 +1,5 @@
 <div class="form mt-4">
-  <%= form_for @flat do |f| %>
+  <%= form_for @flat, html: { multipart: true } do |f| %>
     <div class="field">
       <%= f.label :name, "Nom de l'appartement" %><br>
       <%= f.text_field :name, placeholder: "L'Atelier des maîtres" %>
@@ -37,7 +37,7 @@
 
     <div class="field">
       <%= f.label :main_photo, "Photo principale (URL Cloudinary)" %><br>
-      <%= f.file_field :main_photo %>
+      <%= f.file_field :main_photo, as: :file %>
     </div>
 
     <div class="field">

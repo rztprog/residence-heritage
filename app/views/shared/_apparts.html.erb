@@ -1,16 +1,31 @@
-<div class="card-grid mt-5 mb-5">
+<header class="section-title">
+  <% if controller_name == "flats" %>
+    <nav class="breadcrumb">
+      <%= link_to "Accueil", root_path %>
+      / <%= link_to "Appartements", flats_path %>
+    </nav>
+  <% end %>
+  <h1>Nos appartements</h1>
+  <p>Des espaces pensés pour vivre pleinement</p>
+</header>
+<div>
+  <%= link_to new_flat_path, class: "my-5 inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg shadow transition duration-150" do %>
+    Ajouter un appartement
+  <% end %>
+</div>
+<div class="card-grid">
   <% @flats.each do |flat| %>
     <a href="appartements/<%= flat.id %>">
       <div class="card-flat">
         <figure>
-          <img src="https://plus.unsplash.com/premium_photo-1674676471417-07f613528a94?q=80&w=1445&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <img src="<%= cl_image_path flat.main_photo.key %>" alt="">
         </figure>
         <div class="card-flat-body">
           <p class="card-text"><%= flat.address %></p>
           <h2 class="card-title font-(family-name:--body-font)"><%= flat.name %></h2>
-          <p class="card-text"><span class="card-icon">🛏️</span> <%= flat.rooms %> chambres</p>
-          <p class="card-text"><span class="card-icon">🏠</span> <%= flat.surface %> m²</p>
-          <p class="card-text"><span class="card-icon">📍</span> <%= flat.subway %></p>
+          <p class="card-text"><span class="card-icon">🛏️</span><%= flat.rooms %> chambres</p>
+          <p class="card-text"><span class="card-icon">🏠</span><%= flat.surface %> m²</p>
+          <p class="card-text"><span class="card-icon">📍</span><%= flat.subway %></p>
         </div>
       </div>
     </a>

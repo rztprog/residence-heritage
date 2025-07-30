@@ -32,7 +32,6 @@ h1 {
   width: 175px;
   height: 1px;
   background-color: black;
-  margin-top: 0.5rem;
 }
 
 .separation-vertical::after {
@@ -45,8 +44,12 @@ h1 {
 }
 
 .services-list {
-  height: 400px;
+  /* height: 400px; */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+}
+
+.services-list > li {
+  margin-bottom: 10px;
 }

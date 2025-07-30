@@ -10,9 +10,6 @@
 }
 
 .price-card {
-    position: absolute;
-    right: 0;
-    top: -100px;
     width: 400px;
     background-color: #fff;
     border-radius: 10px;
@@ -62,4 +59,20 @@ hr {
 
 .join-button:hover {
     background-color: var(--light-blue);
+}
+
+.content-show {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-right-show {
+    position: relative;
+    top: -100px;
+    margin-left: 40px;
+    width: 400px;
+}
+
+.show-address {
+    font-style: italic;
 }

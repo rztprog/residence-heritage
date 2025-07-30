@@ -1,55 +1,55 @@
 <div class="form mt-4">
-  <%= form_for @flat do |f| %>
+  <%= form_for @flat, html: { multipart: true } do |f| %>
     <div class="field">
       <%= f.label :name, "Nom de l'appartement" %><br>
-      <%= f.text_field :name, placeholder: "L'Atelier des maîtres" %>
+      <%= f.text_field :name, placeholder: "L'Atelier des maîtres", required: true %>
     </div>
 
     <div class="field">
       <%= f.label :address, "Adresse" %><br>
-      <%= f.text_field :address, placeholder: "2 Boulevard de la république, 59100 Roubaix" %>
+      <%= f.text_field :address, placeholder: "2 Boulevard de la république, 59100 Roubaix", required: true %>
     </div>
 
     <div class="field">
       <%= f.label :title, "Titre de l'annonce" %><br>
-      <%= f.text_field :title, placeholder: "2 chambres | 1 pièce de vie | DPE C" %>
+      <%= f.text_field :title, placeholder: "2 chambres | 1 pièce de vie | DPE C", required: true %>
     </div>
 
     <div class="field">
       <%= f.label :rooms, "Nombre de chambre" %><br>
-      <%= f.number_field :rooms %>
+      <%= f.number_field :rooms, required: true %>
     </div>
 
     <div class="field">
       <%= f.label :surface, "Surface en m²" %><br>
-      <%= f.number_field :surface %>
+      <%= f.number_field :surface, required: true %>
     </div>
 
     <div class="field">
       <%= f.label :subway, "Transport à proximité" %><br>
-      <%= f.text_field :subway %>
+      <%= f.text_field :subway, required: true %>
     </div>
 
     <div class="field">
       <%= f.label :description, "Description" %><br>
-      <%= f.text_area :description %>
+      <%= f.text_area :description, required: true %>
     </div>
 
     <div class="field">
       <%= f.label :main_photo, "Photo principale (URL Cloudinary)" %><br>
-      <%= f.file_field :main_photo %>
+      <%= f.file_field :main_photo, as: :file, required: true %>
     </div>
 
     <div class="field">
       <%= f.label :rent, "Loyer (en €)" %><br>
-      <%= f.number_field :rent, placeholder: "600" %>
+      <%= f.number_field :rent, placeholder: "600", required: true %>
     </div>
 
     <div class="field ">
       <%= f.label :charges, "Charges (en €)" %><br>
-      <%= f.number_field :charges, placeholder: "50" %>
+      <%= f.number_field :charges, placeholder: "50", required: true %>
     </div>
-    <div class='flex mb-2'>
+    <div class='flex'>
       <div class="actions">
         <%= f.submit "Enregistrer", class: "cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow transition duration-150" %>
       </div>

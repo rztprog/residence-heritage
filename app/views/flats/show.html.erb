@@ -1,85 +1,53 @@
 <figure class='show-figure'>
-  <img src="https://plus.unsplash.com/premium_photo-1674676471417-07f613528a94?q=80&w=1445&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+  <% if @flat.main_photo.key %>
+    <img src="<%= cl_image_path @flat.main_photo.key %>"  alt="photo de l'appartement">
+  <% end %>
 </figure>
-<div class="relative font-(family-name:--inter-font) mt-5 max-w-[1728px] w-full px-6 sm:px-12 lg:px-[120px] xl:px-[140px] mx-auto">
-  <div class='price-card mx-6 sm:mx-12 lg:mx-[120px] xl:mx-[140px]'>
-    <p class='text-2xl'><b>€ <%= @flat.rent + @flat.charges %></b> /<span class='text-sm'> mois</span></p>
-    <p class='text-sm'>Toutes charges comprises</p>
-    <hr>
-    <div class='price-card-line'>
-      <p>Loyer / mois</p>
-      <p><%= @flat.rent %>€</p>
-    </div>
-    <div class='price-card-line'>
-      <p>Charges</p>
-      <p><%= @flat.charges %>€</p>
-    </div>
-    <div class='mt-5 price-card-line font-bold'>
-      <p>Total / mois</p>
-      <p><%= @flat.rent + @flat.charges %>€</p>
-    </div>
-    <hr>
-    <div class='price-card-line font-bold'>
-      <p>Dépôt de garantie</p>
-      <p><%= @flat.rent + @flat.charges %>€</p>
-    </div>
-    <hr>
-    <div class='price-card-line font-bold'>
-      <p>Éligible aux aides (APL, ALS)</p>
-      <p>Oui</p>
-    </div>
-    <div class='price-card-line font-bold'>
-      <p>Chambre disponible</p>
-      <p>Oui</p>
-    </div>
-    <%= link_to contact_path, class: "join-button mt-5 inline-block bg-(--blue) text-white font-semibold py-4 px-4 rounded-xl shadow transition duration-150 w-full text-center" do %>
-      Je veux rejoindre cette collocation   
-    <% end %>
-  </div>
-  
-    <nav class="breadcrumb">
-      <%= link_to "Accueil", root_path %>
-      / <%= link_to "Appartements", flats_path %>
-      / <%= link_to @flat.name, flat_path(@flat.id) %>
-    </nav>
-    <%= link_to edit_flat_path(@flat), class: "mt-5 inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg shadow transition duration-150" do %>
-      Modifier l'appartement
-    <% end %>
-    <h1 class='show-name mt-5'><%= @flat.name %></h1>
-    <p class='show-title mb-5'><%= @flat.title %></p>
-    <div class='card-description-wrapper mb-10'>
-      <p class='w-[60%]'><%= @flat.description %></p>
-    </div>
-    <h2 class='show-name'>Plongez dans les lieux</h2>
-    <p>Ici les photos blabla..</p>
-    <div class="show-photos-grid"></div>
-    <h2 class='show-name'>Équipements</h2>
-    <div class="">
-      <div class="mb-10 flex">
-        <div class="w-[50%]">
-          <h2 class='text-xl'>🛏️ Équipements individuels</h2>
-          <p class='mb-10'>Dans chaque chambre</p>
-          <ul class='services-list'>
-            <li>✅ Internet haut débit (Wifi 6E)</li>
-            <li>✅ Abonnements Netflix / Prime (salon & chambres)</li>
-            <li>✅ Robot aspirateur / laveur</li>
-            <li>✅ Ioniseur d'air</li>
-            <li>✅ Ménage hebdomadaire</li>
-            <li>✅ Accés sécurisé et alarme connecté</li>
-          </ul>
-        </div>
-        <div class="show-separation-vertical"></div>
-        <div class="w-[50%]">
-          <h2 class='text-xl'>🛋️ Équipements communs</h2>
-          <p class='mb-10'>Pièce de vie & espaces partagés</p>
-          <div class="services-list">
+<div class="relative font-(family-name:--inter-font) my-10 max-w-[1728px] w-full px-6 sm:px-12 lg:px-[120px] xl:px-[140px] mx-auto">
+  <div class="content-show">
+    <div class="content-left-show">
+      <nav class="breadcrumb">
+        <%= link_to "Accueil", root_path %>
+        / <%= link_to "Appartements", flats_path %>
+        / <%= link_to @flat.name, flat_path(@flat.id) %>
+      </nav>
+      <%= link_to edit_flat_path(@flat), class: "my-5 inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg shadow transition duration-150" do %>
+        Modifier l'appartement
+      <% end %>
+      <h1 class='show-name'><%= @flat.name %></h1>
+      <p class='show-title mb-5'><%= @flat.title %></p>
+      <div class='card-description-wrapper mb-10'>
+        <p><%= @flat.description %></p>
+      </div>
+      <h2 class='show-name'>Plongez dans les lieux</h2>
+      <p>Ici les photos blabla..</p>
+      <div class="show-photos-grid"></div>
+      <h2 class='show-name'>Équipements</h2>
+      <div class="">
+        <div class="mb-10 flex">
+          <div class="w-[50%]">
+            <h2 class='text-xl'>🛏️ Équipements individuels</h2>
+            <p class='mb-10'>Dans chaque chambre</p>
+            <ul class='services-list'>
+              <li>✅ Lit double avec matelas haut de gamme</li>
+              <li>✅ Bureau & chaise de travail confort</li>
+              <li>✅ Rangement (penderie / étagères)</li>
+              <li>✅ Salle de bain privative (douche, vasque, WC)</li>
+              <li>✅ Accès Netflix / Prime vidéo</li>
+              <li>✅ Connexion internet haut débit (RJ45 ou Wi-Fi)</li>
+            </ul>
+          </div>
+          <div class="show-separation-vertical"></div>
+          <div class="w-[50%]">
+            <h2 class='text-xl'>🛋️ Équipements communs</h2>
+            <p class='mb-10'>Pièce de vie & espaces partagés</p>
             <ul class='services-list'>
               <li>✅ Canapé & espace TV (Connecté)</li>
-              <li>✅ Cuisine équipée (plaque, four, micro-ondes, frigo, ustensiles...)</li>
+              <li>✅ Cuisine équipée (plaque, four, micro-ondes, frigo)</li>
               <li>✅ Lave-linge / sèche-linge</li>
               <li>✅ Table à manger & chaises</li>
               <li>✅ Robot aspirateur / laveur</li>
-              <li>✅ Ioniseur d’air</li>
+              <li>✅ Ioniseur d'air</li>
               <li>✅ Service de ménage hebdomadaire</li>
               <li>✅ Accès sécurisé & alarme connecté</li>
               <li>✅ Espaces lumineux et décorés avec soin</li>
@@ -88,17 +56,55 @@
         </div>
       </div>
     </div>
-    <h2 class='show-name'>Où se trouve l'appartement ?</h2>
-    <p>
-      <%= @flat.address %>
-    </p>
-    <div 
-      id="map"
-      data-controller="map"
-      data-map-latitude="<%= @flat.latitude %>"
-      data-map-longitude="<%= @flat.longitude %>"
-      data-map-name="<%= @flat.name %>"
-      data-map-address="<%= @flat.address %>"
-      class="mb-10">
+
+    <div class="content-right-show">
+      <div class='price-card'>
+        <p class='text-3xl'><b>€ <%= @flat.rent + @flat.charges %></b> /<span class='text-sm'> mois</span></p>
+        <p class='text-sm'>Toutes charges comprises</p>
+        <hr>
+        <div class='price-card-line'>
+          <p>Loyer / mois</p>
+          <p><%= @flat.rent %>€</p>
+        </div>
+        <div class='price-card-line'>
+          <p>Charges</p>
+          <p><%= @flat.charges %>€</p>
+        </div>
+        <div class='mt-5 price-card-line font-bold'>
+          <p>Total / mois</p>
+          <p><%= @flat.rent + @flat.charges %>€</p>
+        </div>
+        <hr>
+        <div class='price-card-line font-bold'>
+          <p>Dépôt de garantie</p>
+          <p><%= @flat.rent + @flat.charges %>€</p>
+        </div>
+        <hr>
+        <div class='price-card-line font-bold'>
+          <p>Éligible aux aides (APL, ALS)</p>
+          <p>Oui</p>
+        </div>
+        <div class='price-card-line font-bold'>
+          <p>Chambre disponible</p>
+          <p>Oui</p>
+        </div>
+        <%= link_to contact_path, class: "join-button mt-5 inline-block bg-(--blue) text-white font-semibold py-4 px-4 rounded-xl shadow transition duration-150 w-full text-center" do %>
+          Je veux rejoindre cette collocation   
+        <% end %>
+      </div>
     </div>
+  </div>
+  <h2 class='show-name'>Où se trouve l'appartement ?</h2>
+  <p class='show-address'>
+    <%= @flat.address %>
+  </p>
+  <div 
+    id="map"
+    data-controller="map"
+    data-map-latitude="<%= @flat.latitude %>"
+    data-map-longitude="<%= @flat.longitude %>"
+    data-map-name="<%= @flat.name %>"
+    data-map-address="<%= @flat.address %>"
+    >
+  </div>
 </div>

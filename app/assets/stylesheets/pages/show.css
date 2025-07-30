@@ -10,13 +10,7 @@
 }
 
 .price-card {
-    /* position: absolute;
-    right: 0;
-    top: -100px;
-    */
-
     width: 400px;
-
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 
@@ -73,6 +67,12 @@ hr {
 }
 
 .content-right-show {
+    position: relative;
+    top: -100px;
     margin-left: 40px;
     width: 400px;
+}
+
+.show-address {
+    font-style: italic;
 }

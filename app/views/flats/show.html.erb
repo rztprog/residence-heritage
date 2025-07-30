@@ -1,5 +1,5 @@
 <figure class='show-figure'>
-  <img src="<%= cl_image_path @flat.main_photo.key %>"  alt="">
+  <img src="<%= cl_image_path @flat.main_photo.key %>"  alt="photo de l'appartement">
 </figure>
 <div class="relative font-(family-name:--inter-font) my-10 max-w-[1728px] w-full px-6 sm:px-12 lg:px-[120px] xl:px-[140px] mx-auto">
   <div class="content-show">
@@ -57,7 +57,7 @@
 
     <div class="content-right-show">
       <div class='price-card'>
-        <p class='text-2xl'><b>€ <%= @flat.rent + @flat.charges %></b> /<span class='text-sm'> mois</span></p>
+        <p class='text-3xl'><b>€ <%= @flat.rent + @flat.charges %></b> /<span class='text-sm'> mois</span></p>
         <p class='text-sm'>Toutes charges comprises</p>
         <hr>
         <div class='price-card-line'>

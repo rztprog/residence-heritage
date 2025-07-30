@@ -1,3 +1,18 @@
+<header class="section-title">
+  <% if controller_name == "flats" %>
+    <nav class="breadcrumb">
+      <%= link_to "Accueil", root_path %>
+      / <%= link_to "Appartements", flats_path %>
+    </nav>
+  <% end %>
+  <h1>Nos appartements</h1>
+  <p>Des espaces pensés pour vivre pleinement</p>
+</header>
+<div>
+  <%= link_to new_flat_path, class: "my-5 inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg shadow transition duration-150" do %>
+    Ajouter un appartement
+  <% end %>
+</div>
 <div class="card-grid">
   <% @flats.each do |flat| %>
     <a href="appartements/<%= flat.id %>">

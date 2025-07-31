@@ -50,14 +50,14 @@ class FlatsController < ApplicationController
       :title,
       :description,
       :main_photo,
-      photos: [],
       :rent,
       :charges,
       :subway,
       :surface,
       :rooms,
       :latitude,
-      :longitude
+      :longitude,
+      photos: []
     )
   end
 

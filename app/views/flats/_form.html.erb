@@ -41,6 +41,11 @@
     </div>
 
     <div class="field">
+      <%= f.label :photos, "Photos supplémentaires" %><br>
+      <%= f.file_field :photos, as: :file, multiple: true %>
+    </div>
+
+    <div class="field">
       <%= f.label :rent, "Loyer (en €)" %><br>
       <%= f.number_field :rent, placeholder: "600", required: true %>
     </div>

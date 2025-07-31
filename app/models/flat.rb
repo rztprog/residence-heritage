@@ -1,6 +1,7 @@
 class Flat < ApplicationRecord
   has_one_attached :main_photo
-  validate :main_photo
+  validates :main_photo, presence: true
+
   has_many_attached :photos
 
   geocoded_by :address

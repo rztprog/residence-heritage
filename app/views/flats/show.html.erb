@@ -20,7 +20,9 @@
         <p><%= @flat.description %></p>
       </div>
       <h2 class='show-name'>Plongez dans les lieux</h2>
-      <p>Ici les photos blabla..</p>
+      <% @flat.photos.each do |photo| %>
+        <%= image_tag photo %>
+      <% end %>
       <div class="show-photos-grid"></div>
       <h2 class='show-name'>Équipements</h2>
       <div class="">

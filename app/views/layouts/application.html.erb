@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Test Template" %></title>
+    <title><%= content_for(:title) || "Résidence Héritage - Collocation etudiante" %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -20,6 +20,10 @@
 
     <link href='https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css' rel='stylesheet' />
     <script src="https://kit.fontawesome.com/c3358e0237.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" %>
+    <%= javascript_include_tag "https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox-plus-jquery.min.js", defer: true %>
   </head>
   <body class="min-h-screen flex flex-col">
     <div class="flex-1 flex flex-col">

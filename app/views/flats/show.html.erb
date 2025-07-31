@@ -1,3 +1,4 @@
+<% content_for :title, @flat.name + " - Résidence Héritage - Collocation étudiante" %>
 <figure class='show-figure'>
   <% if @flat.main_photo.key %>
     <img src="<%= cl_image_path @flat.main_photo.key %>"  alt="photo de l'appartement">
@@ -22,7 +23,11 @@
       <h2 class='show-name'>Plongez dans les lieux</h2>
       <div class='flat-photos-grid'>
         <% @flat.photos.each do |photo| %>
-          <figure class="flat-photos-photo"><%= image_tag photo %></figure>
+          <figure class="flat-photos-photo">
+            <%= link_to url_for(photo), data: { lightbox: "flat-gallery" } do %>
+              <%= image_tag photo %>
+            <% end %>
+          </figure>
         <% end %>
       </div>
       <div class="show-photos-grid"></div>

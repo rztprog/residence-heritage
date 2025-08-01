@@ -1,0 +1,35 @@
+.mentions-legales {
+    font-family: var(--);
+}
+
+.mentions-legales h2 {
+    color: var(--blue);
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-family: var(--body-font);
+}
+
+.mentions-legales h3 {
+    color: var(--blue);
+    font-size: 1.2rem;
+}
+
+.mentions-legales a {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+.mentions-legales a:hover {
+    color: rgb(77, 77, 216);
+}
+
+.mentions-legales ul {
+  list-style-type: disc;
+  padding-left: 40px; /* augmente le retrait à gauche pour voir les puces */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mentions-legales li {
+  margin-bottom: 5px;
+}

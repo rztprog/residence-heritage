@@ -138,8 +138,6 @@ GEM
     ffi (1.17.2-arm-linux-musl)
     ffi (1.17.2-x86_64-linux-gnu)
     ffi (1.17.2-x86_64-linux-musl)
-    font-awesome-rails (4.7.0.9)
-      railties (>= 3.2, < 9.0)
     foreman (0.90.0)
       thor (~> 1.4)
     fugit (1.11.1)
@@ -165,9 +163,9 @@ GEM
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    jbuilder (2.13.0)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
+    jbuilder (2.14.0)
+      actionview (>= 7.0.0)
+      activesupport (>= 7.0.0)
     json (2.13.2)
     kamal (2.7.0)
       activesupport (>= 7.0)
@@ -423,7 +421,6 @@ DEPENDENCIES
   debug
   dotenv-rails
   faker
-  font-awesome-rails (~> 4.7, >= 4.7.0.9)
   foreman
   geocoder
   hotwire-livereload

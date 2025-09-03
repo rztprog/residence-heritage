@@ -138,8 +138,6 @@ GEM
     ffi (1.17.2-arm-linux-musl)
     ffi (1.17.2-x86_64-linux-gnu)
     ffi (1.17.2-x86_64-linux-musl)
-    font-awesome-rails (4.7.0.9)
-      railties (>= 3.2, < 9.0)
     foreman (0.90.0)
       thor (~> 1.4)
     fugit (1.11.1)
@@ -234,9 +232,11 @@ GEM
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
-    pg (1.6.0)
-    pg (1.6.0-aarch64-linux)
-    pg (1.6.0-x86_64-linux)
+    pg (1.6.2)
+    pg (1.6.2-aarch64-linux)
+    pg (1.6.2-aarch64-linux-musl)
+    pg (1.6.2-x86_64-linux)
+    pg (1.6.2-x86_64-linux-musl)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
@@ -423,14 +423,13 @@ DEPENDENCIES
   debug
   dotenv-rails
   faker
-  font-awesome-rails (~> 4.7, >= 4.7.0.9)
   foreman
   geocoder
   hotwire-livereload
   importmap-rails
   jbuilder
   kamal
-  pg (~> 1.1)
+  pg (~> 1.6)
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.2)

@@ -4,7 +4,7 @@
     <img src="<%= cl_image_path @flat.main_photo.key %>"  alt="photo de l'appartement">
   <% end %>
 </figure>
-<div class="relative font-(family-name:--inter-font) my-10 max-w-[1728px] w-full px-6 sm:px-12 lg:px-[120px] xl:px-[140px] mx-auto">
+<div class="relative font-(family-name:--inter-font) my-10 max-w-[1728px] w-full px-6 sm:px-12 lg:px-20 xl:px-24 mx-auto">
   <div class="content-show">
     <div class="content-left-show">
       <nav class="breadcrumb">
@@ -31,39 +31,6 @@
         <% end %>
       </div>
       <div class="show-photos-grid"></div>
-      <h2 class='show-name'>Équipements</h2>
-      <div class="">
-        <div class="mb-10 flex">
-          <div class="w-[50%]">
-            <h2 class='text-xl'>🛏️ Équipements individuels</h2>
-            <p class='mb-10'>Dans chaque chambre</p>
-            <ul class='services-list'>
-              <li>✅ Lit double avec matelas haut de gamme</li>
-              <li>✅ Bureau & chaise de travail confort</li>
-              <li>✅ Rangement (penderie / étagères)</li>
-              <li>✅ Salle de bain privative (douche, vasque, WC)</li>
-              <li>✅ Accès Netflix / Prime vidéo</li>
-              <li>✅ Connexion internet haut débit (RJ45 ou Wi-Fi)</li>
-            </ul>
-          </div>
-          <div class="show-separation-vertical"></div>
-          <div class="w-[50%]">
-            <h2 class='text-xl'>🛋️ Équipements communs</h2>
-            <p class='mb-10'>Pièce de vie & espaces partagés</p>
-            <ul class='services-list'>
-              <li>✅ Canapé & espace TV (Connecté)</li>
-              <li>✅ Cuisine équipée (plaque, four, micro-ondes, frigo)</li>
-              <li>✅ Lave-linge / sèche-linge</li>
-              <li>✅ Table à manger & chaises</li>
-              <li>✅ Robot aspirateur / laveur</li>
-              <li>✅ Ioniseur d'air</li>
-              <li>✅ Service de ménage hebdomadaire</li>
-              <li>✅ Accès sécurisé & alarme connecté</li>
-              <li>✅ Espaces lumineux et décorés avec soin</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="content-right-show">
@@ -103,6 +70,39 @@
       </div>
     </div>
   </div>
+
+  <h2 class='show-name'>Équipements</h2>
+  <div class="show-equipment">
+    <div class="show-part">
+      <h2 class='text-xl'>🛏️ Équipements individuels</h2>
+      <p class='show-description'>Dans chaque chambre</p>
+      <ul class='services-list'>
+        <li>✅ Lit double avec matelas haut de gamme</li>
+        <li>✅ Bureau & chaise de travail confort</li>
+        <li>✅ Rangement (penderie / étagères)</li>
+        <li>✅ Salle de bain privative (douche, vasque, WC)</li>
+        <li>✅ Accès Netflix / Prime vidéo</li>
+        <li>✅ Connexion internet haut débit (RJ45 ou Wi-Fi)</li>
+      </ul>
+    </div>
+    <div class="show-separation-vertical"></div>
+    <div class="show-part">
+      <h2 class='text-xl'>🛋️ Équipements communs</h2>
+      <p class='show-description'>Pièce de vie & espaces partagés</p>
+      <ul class='services-list'>
+        <li>✅ Canapé & espace TV (Connecté)</li>
+        <li>✅ Cuisine équipée (plaque, four, micro-ondes, frigo)</li>
+        <li>✅ Lave-linge / sèche-linge</li>
+        <li>✅ Table à manger & chaises</li>
+        <li>✅ Robot aspirateur / laveur</li>
+        <li>✅ Ioniseur d'air</li>
+        <li>✅ Service de ménage hebdomadaire</li>
+        <li>✅ Accès sécurisé & alarme connecté</li>
+        <li>✅ Espaces lumineux et décorés avec soin</li>
+      </ul>
+    </div>
+  </div>
+
   <h2 class='show-name'>Où se trouve l'appartement ?</h2>
   <p class='show-address'>
     <%= @flat.address %>

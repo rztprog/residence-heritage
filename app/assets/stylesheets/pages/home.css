@@ -53,3 +53,11 @@ h1 {
 .services-list > li {
   margin-bottom: 10px;
 }
+
+.history {
+  display: flex;
+}
+
+.history-part{
+  width: 50%;
+}

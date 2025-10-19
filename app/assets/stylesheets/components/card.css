@@ -4,14 +4,20 @@
     grid-template-rows: 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 0px;
-    margin-top: 5vh;
+    margin-top: 2rem;
     height: 100%;
 }
 
 .card {
     overflow: hidden;
-    border-radius: 0 2rem 0 0;
-    height: 60vh;
+    border-radius: 22px;
+    height: 500px;
+}
+
+.card-wrapper {
+    border-radius: 30px;
+    background-color: #fff;
+    padding: 7px;
 }
 
 .card img {
@@ -23,7 +29,7 @@
 }
 
 figcaption {
-    padding-top: 1rem;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     font-size: 20px;

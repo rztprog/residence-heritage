@@ -1,0 +1,52 @@
+/* Mobile (≤ 768px) */
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .card {
+        height: 300px;
+    }
+
+    .section-title::after {
+        content: '';
+        display: block;
+        width: 175px;
+        height: 1px;
+        background-color: black;
+        margin: auto;
+    }
+
+    .section-title {
+        text-align: center;
+    }
+
+    .history-part {
+        display: block;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .section-buttons {
+        text-align: center;
+    }
+
+    .history {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .history-part {
+        width: 100%;
+    }
+
+    .separation-vertical{
+        background-color: rgba(0, 0, 0, 0.20);
+        height: 1px;
+        margin: 12px 0;
+    }
+}

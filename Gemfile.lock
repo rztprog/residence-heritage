@@ -138,8 +138,6 @@ GEM
     ffi (1.17.2-arm-linux-musl)
     ffi (1.17.2-x86_64-linux-gnu)
     ffi (1.17.2-x86_64-linux-musl)
-    font-awesome-rails (4.7.0.9)
-      railties (>= 3.2, < 9.0)
     foreman (0.90.0)
       thor (~> 1.4)
     fugit (1.11.1)
@@ -375,9 +373,9 @@ GEM
     tailwindcss-ruby (4.1.11-x86_64-linux-gnu)
     tailwindcss-ruby (4.1.11-x86_64-linux-musl)
     thor (1.4.0)
-    thruster (0.1.14)
-    thruster (0.1.14-aarch64-linux)
-    thruster (0.1.14-x86_64-linux)
+    thruster (0.1.16)
+    thruster (0.1.16-aarch64-linux)
+    thruster (0.1.16-x86_64-linux)
     timeout (0.4.3)
     tsort (0.2.0)
     turbo-rails (2.0.16)
@@ -423,7 +421,6 @@ DEPENDENCIES
   debug
   dotenv-rails
   faker
-  font-awesome-rails (~> 4.7, >= 4.7.0.9)
   foreman
   geocoder
   hotwire-livereload

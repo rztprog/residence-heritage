@@ -97,7 +97,12 @@
         margin-bottom: 30px !important;
     }
 
-    .show-description {
+    .show-left-part {
+        width: 100% !important;
+    }
 
+    .show-right-part {
+        /* position: absolute; */
+        width: 100% !important;
     }
 }

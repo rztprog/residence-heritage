@@ -116,8 +116,22 @@ hr {
 
 .show-equipment {
     display: flex;
+    position: relative;
 }
 
 .show-description {
     margin-bottom: 10px;
+}
+
+.show-separation-vertical {
+
+}
+
+.show-left-part {
+    width: 50%;
+}
+
+.show-right-part {
+    /* position: absolute; */
+    width: 50%;
 }

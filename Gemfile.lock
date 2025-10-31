@@ -138,8 +138,6 @@ GEM
     ffi (1.17.2-arm-linux-musl)
     ffi (1.17.2-x86_64-linux-gnu)
     ffi (1.17.2-x86_64-linux-musl)
-    font-awesome-rails (4.7.0.9)
-      railties (>= 3.2, < 9.0)
     foreman (0.90.0)
       thor (~> 1.4)
     fugit (1.11.1)
@@ -253,7 +251,7 @@ GEM
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
-    rack (3.1.16)
+    rack (3.2.0)
     rack-session (2.1.1)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
@@ -340,7 +338,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    solid_cable (3.0.11)
+    solid_cable (3.0.12)
       actioncable (>= 7.2)
       activejob (>= 7.2)
       activerecord (>= 7.2)
@@ -423,7 +421,6 @@ DEPENDENCIES
   debug
   dotenv-rails
   faker
-  font-awesome-rails (~> 4.7, >= 4.7.0.9)
   foreman
   geocoder
   hotwire-livereload
